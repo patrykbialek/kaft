@@ -3,14 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { KtAppHeaderComponent } from './kt-app-header/kt-app-header.component';
-import { KtAppFooterComponent } from './kt-app-footer/kt-app-footer.component';
+import { AppHeaderComponent } from './app-header/app-header.component';
+import { AppFooterComponent } from './app-footer/app-footer.component';
+import { MainComponent } from './main/main.component';
+import { ServicesComponent } from './services/services.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    KtAppHeaderComponent,
-    KtAppFooterComponent
+    AppHeaderComponent,
+    AppFooterComponent,
+    MainComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
