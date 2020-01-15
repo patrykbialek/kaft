@@ -7,6 +7,10 @@ import { AppHeaderComponent } from './app-header/app-header.component';
 import { AppFooterComponent } from './app-footer/app-footer.component';
 import { MainComponent } from './main/main.component';
 import { ServicesComponent } from './services/services.component';
+import { IndustriesComponent } from './industries/industries.component';
+import { CaseStudiesComponent } from './case-studies/case-studies.component';
+import { AboutComponent } from './about/about.component';
+import { BlogComponent } from './blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +18,11 @@ import { ServicesComponent } from './services/services.component';
     AppHeaderComponent,
     AppFooterComponent,
     MainComponent,
-    ServicesComponent
+    ServicesComponent,
+    IndustriesComponent,
+    CaseStudiesComponent,
+    AboutComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
