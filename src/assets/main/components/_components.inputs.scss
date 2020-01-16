@@ -61,6 +61,9 @@ $error-color : $red-500;
     resize: vertical;
     transition: all 0.3s ease-in-out;
     width: 100%;
+    &:hover {
+      border-color: #9E9E9E;
+    }
     &:focus {
       background-color: $white_1000;
       border: 1px solid $border-color;
