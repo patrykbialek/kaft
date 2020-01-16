@@ -13,17 +13,20 @@ $grey_800:  #424242;
 $grey_900:  #212121;
 
 .c-app-header {
-  font-size: 1.8rem;
+  // font-size: 1.8rem;
 
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  // align-items: center;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: space-between;
 
-  // height: 56px;
-  // background-color: #ccc;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 
-  padding: 36px;
+  // padding: 36px;
 }
 
 .c-top-nav {

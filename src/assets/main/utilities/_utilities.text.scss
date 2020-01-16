@@ -75,3 +75,17 @@
   &-small  { font-size: 1.4rem!important; }
   &-tiny   { font-size: 1.2rem!important; }
 }
+
+
+/**
+ * Utility classes to put specific tranform onto elements text.
+ *
+ *   .u-text-decoration-underline {}
+ */
+
+ .u-t-d,
+ .u-text-decoration {
+   &-u { text-decoration: underline!important; }
+   &-underline { text-decoration: underline!important; }
+ }
+ 
