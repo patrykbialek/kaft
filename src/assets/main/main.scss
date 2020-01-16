@@ -81,6 +81,7 @@
 $inuit-global-font-size: 10px;
 $inuit-global-line-height: 16px;
 @import "node_modules/inuitcss/settings/settings.core";
+
 @import "settings/settings.global";
 
 
@@ -92,9 +93,10 @@ $inuit-global-line-height: 16px;
 @import "node_modules/inuitcss/tools/tools.clearfix";
 @import "node_modules/inuitcss/tools/tools.hidden";
 @import "node_modules/sass-mq/mq";
-@import "tools/tools.aliases";
 
 @import "tools/tools.aliases";
+
+
 
 
 
@@ -121,6 +123,7 @@ $inuit-global-line-height: 16px;
 
 
 
+
 // OBJECTS
 //
 // Uncomment and add to this section as necessary.
@@ -139,6 +142,7 @@ $inuit-wrapper-width: 1280px;
 @import "node_modules/inuitcss/objects/objects.pack";
 
 @import "node_modules/inuit-flexgrid/objects/objects.grid";
+
 
 
 

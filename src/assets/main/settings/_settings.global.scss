@@ -10,10 +10,9 @@
 // Standardise some UI treatments.
 
 html, body {
-  font-family: Lato, sans-serif;
+  font-family: Ubuntu, sans-serif;
   background-color: $grey_50;
   color: $grey_800;
-  -webkit-font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
 }
@@ -23,7 +22,7 @@ html {
 }
 
 button, input, optgroup, select, textarea {
-  font-family: Lato, sans-serif;
+  font-family: Ubuntu, sans-serif;
   margin: 0;
 }
 
@@ -43,7 +42,7 @@ $inuit-global-color:            $grey_800;
 $inuit-global-background-color: $grey_50;
 
 
-$color--primary:    $blue_800;
+$color--primary:    $light_blue_A700;
 $color--secondary:  $deep_purple_700;
 $color--accent:     $red_A400;
 
