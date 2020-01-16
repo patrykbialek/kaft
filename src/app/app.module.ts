@@ -11,6 +11,7 @@ import { IndustriesComponent } from './industries/industries.component';
 import { CaseStudiesComponent } from './case-studies/case-studies.component';
 import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog/blog.component';
+import { MainIntroComponent } from './main/main-intro/main-intro.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BlogComponent } from './blog/blog.component';
     IndustriesComponent,
     CaseStudiesComponent,
     AboutComponent,
-    BlogComponent
+    BlogComponent,
+    MainIntroComponent
   ],
   imports: [
     BrowserModule,
