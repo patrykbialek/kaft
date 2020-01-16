@@ -1,0 +1,165 @@
+/* ==========================================================================
+   #SPINNERS
+   ========================================================================== */
+
+
+/**
+ * This is an example component. Extend inuitcss by building your own components
+ * that make up your UI. Component classes are prefixed with a `c-banner`.
+ *
+ *  Examples:
+
+    <sdcc-spinner></sdcc-spinner>
+
+    <div class="c-spinner" [ngClass]="{'c-spinner--animated-opacity': animatedOpacity }" *ngIf="isShown">
+      <div class="c-spinner__body">
+        <div class="c-spinner__spinner"></div>
+      </div>
+    </div>
+
+ */
+
+ .c-spinner {
+  background-color: hsla(0, 0%, 100%, .98);
+
+  height: 100%;
+  margin: auto;
+  width: 100%;
+
+  left: 0;
+  position: fixed;
+  top: 0;
+
+  opacity: 0;
+  transition: opacity 0.3s linear;
+
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  z-index: 1000001;
+
+
+  // Body
+  &__body {
+    height: 100%;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+  // Spinner
+  &__spinner {
+    border-radius: 50%;
+    border: .5rem solid #eee;
+    height: 48px;
+    width: 48px;
+
+    transform: translateZ(0);
+    will-change: transform;
+    animation-name: spin, color1;
+    animation-duration: 1s, 3s;
+    animation-timing-function: linear, ease;
+    animation-delay: 0s, 0s;
+    animation-direction: normal, alternate;
+    animation-iteration-count: infinite, infinite
+  }
+
+
+  // Animated opacity
+  &--animated-opacity {
+    opacity: 1;
+  }
+
+
+  // Inline
+  &--inline {
+    background-color: transparent;
+    height: 20rem;
+    opacity: 1;
+    position: relative;
+  }
+
+}
+
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg) translateZ(0);
+    transform: rotate(0deg) translateZ(0)
+  }
+
+  to {
+    -webkit-transform: rotate(1turn) translateZ(0);
+    transform: rotate(1turn) translateZ(0)
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg) translateZ(0);
+    transform: rotate(0deg) translateZ(0)
+  }
+
+  to {
+    -webkit-transform: rotate(1turn) translateZ(0);
+    transform: rotate(1turn) translateZ(0)
+  }
+}
+
+$red:    #F44336;
+$orange: #FF9800;
+$green:  #4CAF50;
+$blue:   #2196F3;
+@keyframes color1 {
+  to {
+    border-top-color: $red;
+    color:            $red
+  }
+
+  60% {
+    border-top-color: $orange;
+    color:            $orange
+  }
+
+  30% {
+    border-top-color: $green;
+    color:            $green
+  }
+
+  0% {
+    border-top-color: $blue;
+    color:            $blue
+  }
+}
+
+
+@keyframes color2 {
+  to {
+    border-top-color:     $red;
+    border-bottom-color:  $red;
+    color:                $red
+  }
+
+  60% {
+    border-top-color:     $orange;
+    border-bottom-color:  $orange;
+    color:                $orange
+  }
+
+  30% {
+    border-top-color:     $green;
+    border-bottom-color:  $green;
+    color:                $green;
+  }
+
+  0% {
+    border-top-color:     $blue;
+    border-bottom-color:  $blue;
+    color:                $blue;
+  }
+}
+

@@ -1,0 +1,38 @@
+.c-app-header {
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 56px;
+  // background-color: #ccc;
+
+  padding: 0 24px;
+}
+
+.c-top-nav {
+  font-size: 1.6rem;
+  list-style: none;
+
+  display: flex;
+  flex-direction: row;
+
+  &__item {
+    margin-left: 24px;
+
+    &-link {
+      color: inherit;
+      text-decoration: none;
+      transition: color 250ms ease-in-out;
+
+      &:hover {
+        color: blue;
+      }
+
+      &--local {
+        color: blue;
+      }
+    }
+  }
+}

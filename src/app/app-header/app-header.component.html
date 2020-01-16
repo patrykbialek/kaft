@@ -1,1 +1,15 @@
-<p>kt-app-header works!</p>
+<section class="c-app-header">
+  <div>
+    <a [routerLink]="['/']">Kaft</a>
+  </div>
+  <nav>
+    <ul class="c-top-nav">
+      <ng-container *ngFor="let menu of menus">
+        <li class="c-top-nav__item">
+          <a class="c-top-nav__item-link" [routerLink]="[menu.link]" *ngIf="!menu.isLocalLink">{{ menu.name }}</a>
+          <a class="c-top-nav__item-link c-top-nav__item-link--local" [href]="menu.link" *ngIf="menu.isLocalLink">{{ menu.name }}</a>
+        </li>
+      </ng-container>
+    </ul>
+  </nav>
+</section>

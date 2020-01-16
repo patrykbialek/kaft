@@ -1,0 +1,17 @@
+/* ==========================================================================
+   #HIDE
+   ========================================================================== */
+
+
+/**
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+@import "node_modules/inuitcss/utilities/utilities.hide";
+
+.u-hidden,
+.u-is-hidden,
+[hidden] {
+  display: none !important;
+}
