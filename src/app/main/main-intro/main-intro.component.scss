@@ -1,6 +1,9 @@
 .c-main-intro {
   min-height: 100vh;
-
+  background:
+    url('src/assets/images/logo_background.svg')
+    no-repeat
+    right top;
   position: relative;
 
   display: flex;

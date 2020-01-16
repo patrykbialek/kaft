@@ -97,7 +97,7 @@ export class StickyHeaderComponent implements AfterViewInit {
       pairwise(),
       map(([y1, y2]): Direction => (y2 < y1 ? Direction.Up : Direction.Down)),
       tap((direction) => {
-        this.isUp = direction === 'Up' && this.offset > 50;
+        this.isUp = direction === 'Up' && this.offset > 75;
       }),
       distinctUntilChanged(),
       share()
