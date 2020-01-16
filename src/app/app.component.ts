@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
         background: rgba(0, 0, 0, 0.1);
       }
 
-      app-sticky-header {
+      kt-sticky-header {
         align-items: center;
         display: flex;
         justify-content: center;
@@ -19,7 +19,6 @@ import { Component, OnInit } from '@angular/core';
         height: 96px;
         z-index: 1000;
       }
-
     `
   ]
 })

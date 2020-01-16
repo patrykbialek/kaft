@@ -28,7 +28,7 @@ enum Direction {
 }
 
 @Component({
-  selector: 'app-sticky-header',
+  selector: 'kt-sticky-header',
   template: `
     <ng-content></ng-content>
   `,
@@ -93,7 +93,6 @@ export class StickyHeaderComponent implements AfterViewInit {
     const scroll$ = fromEvent(window, 'scroll').pipe(
       throttleTime(10),
       map(() => window.pageYOffset),
-      tap(console.log),
       tap((offset) => this.offset = offset),
       pairwise(),
       map(([y1, y2]): Direction => (y2 < y1 ? Direction.Up : Direction.Down)),
