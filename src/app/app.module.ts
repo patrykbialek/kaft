@@ -12,6 +12,7 @@ import { CaseStudiesComponent } from './case-studies/case-studies.component';
 import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog/blog.component';
 import { MainIntroComponent } from './main/main-intro/main-intro.component';
+import { MainServicesComponent } from './main/main-services/main-services.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MainIntroComponent } from './main/main-intro/main-intro.component';
     CaseStudiesComponent,
     AboutComponent,
     BlogComponent,
-    MainIntroComponent
+    MainIntroComponent,
+    MainServicesComponent
   ],
   imports: [
     BrowserModule,
