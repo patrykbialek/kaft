@@ -12,7 +12,7 @@ $grey_700:  #616161;
 $grey_800:  #424242;
 $grey_900:  #212121;
 
-.c-app-header {
+.c-app-header-wrapper {
   // font-size: 1.8rem;
 
   // align-items: center;
@@ -29,6 +29,15 @@ $grey_900:  #212121;
   // padding: 36px;
 }
 
+.c-app-header {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding: 24px 0;
+}
+
 .c-top-nav {
   list-style: none;
 
@@ -41,7 +50,7 @@ $grey_900:  #212121;
     margin-left: 48px;
 
     &-link {
-      :not(&--local) {
+      :not(&--contact-us) {
         color: $grey_600;
         font-size: 1.8rem;
         font-weight: 500;
