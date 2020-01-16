@@ -85,7 +85,13 @@
 
  .u-t-d,
  .u-text-decoration {
-   &-u { text-decoration: underline!important; }
+   &-u         { text-decoration: underline!important; }
    &-underline { text-decoration: underline!important; }
+ }
+
+ .u-f-s,
+ .u-font-style {
+   &-n      { font-style: normal!important; }
+   &-normal { font-style: normal!important; }
  }
  
