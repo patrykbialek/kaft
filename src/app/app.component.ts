@@ -3,7 +3,39 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styles: [
+    `
+      :host {
+        background: rgba(0, 0, 0, 0.1);
+      }
+
+      app-sticky-header {
+        z-index: 1000;
+        color: white;
+        background-color: #fafafa;
+        height: 96px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .content {
+        padding-top: 96px;
+      }
+
+      .page {
+        height: 50vh;
+      }
+
+      .page:nth-child(odd) {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
+      .page:nth-child(even) {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+    `
+  ]
 })
 export class AppComponent implements OnInit{
  

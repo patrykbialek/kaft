@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { BlogComponent } from './blog/blog.component';
 import { MainIntroComponent } from './main/main-intro/main-intro.component';
 import { MainServicesComponent } from './main/main-services/main-services.component';
 import { MainIndustriesComponent } from './main/main-industries/main-industries.component';
+import { StickyHeaderComponent } from './sticky-header.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +30,13 @@ import { MainIndustriesComponent } from './main/main-industries/main-industries.
     BlogComponent,
     MainIntroComponent,
     MainServicesComponent,
-    MainIndustriesComponent
+    MainIndustriesComponent,
+    StickyHeaderComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
