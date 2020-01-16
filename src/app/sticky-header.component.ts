@@ -26,29 +26,6 @@ enum Direction {
   Down = "Down"
 }
 
-export const toggle = () => {
-  const color = '#ddd';
-  return trigger(`toggle${color}`, [
-    state(
-      VisibilityState.Hidden,
-      style({
-        opacity: 0,
-        transform: "translateY(-100%)",
-        backgroundColor: `${color}`
-      })
-    ),
-    state(
-      VisibilityState.Visible,
-      style({
-        opacity: 1,
-        transform: "translateY(0)",
-        backgroundColor: `${color}`
-      })
-    ),
-    transition("* => *", animate("200ms ease-in"))
-  ]);
-};
-
 @Component({
   selector: "app-sticky-header",
   template: `
@@ -65,18 +42,25 @@ export const toggle = () => {
     `
   ],
   animations: [
-    toggle()
-    //   trigger('toggle', [
-    //     state(
-    //       VisibilityState.Hidden,
-    //       style({ opacity: 0, transform: 'translateY(-100%)', backgroundColor: '{{ backgroundColor }}' })
-    //     ),
-    //     state(
-    //       VisibilityState.Visible,
-    //       style({ opacity: 1, transform: 'translateY(0)', backgroundColor: '{{ backgroundColor }}' })
-    //     ),
-    //     transition('* => *', animate('200ms ease-in'))
-    //   ])
+    trigger("toggle", [
+      state(
+        VisibilityState.Hidden,
+        style({
+          opacity: 0,
+          transform: "translateY(-100%)",
+          // backgroundColor: "{{ backgroundColor }}"
+        })
+      ),
+      state(
+        VisibilityState.Visible,
+        style({
+          opacity: 1,
+          transform: "translateY(0)",
+          // backgroundColor: "{{ backgroundColor }}"
+        })
+      ),
+      transition("* => *", animate("200ms ease-in"))
+    ])
   ]
 })
 export class StickyHeaderComponent implements AfterViewInit {
