@@ -33,7 +33,7 @@ export class AppHeaderComponent implements OnInit {
       link: '#contact_us',
       isLocalLink: true,
     },
-  ]
+  ];
   constructor() { }
 
   ngOnInit() {
