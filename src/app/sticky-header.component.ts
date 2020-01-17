@@ -58,7 +58,7 @@ enum Direction {
           transform: 'translateY(0)',
         })
       ),
-      transition('* => *', animate('350ms ease-in-out'))
+      transition('* => *', animate('450ms ease-in-out'))
     ])
   ]
 })
