@@ -17,12 +17,12 @@ import {
   tap
 } from 'rxjs/operators';
 
-enum VisibilityState {
+export enum VisibilityState {
   Visible = 'visible',
   Hidden = 'hidden'
 }
 
-enum Direction {
+export enum Direction {
   Up = 'Up',
   Down = 'Down'
 }
