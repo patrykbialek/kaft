@@ -1,0 +1,32 @@
+<section class="c-app-header-wrapper">
+  <section class="o-wrapper">
+    <div class="c-app-header">
+      <div class="c-app-header__logo">
+        <a [routerLink]="['/']">
+          <img src="assets/images/Logo_camel_name_v_2.svg" alt="Kaft logo">
+        </a>
+      </div>
+      <nav>
+        <ul class="c-top-nav">
+          <ng-container *ngFor="let menu of menus">
+            <li class="c-top-nav__item">
+              <ng-container *ngIf="!menu.isLocalLink">
+                <a
+                  class="c-top-nav__item-link"
+                  [routerLink]="[menu.link]"
+                >{{ menu.name }}</a>
+              </ng-container>
+              <ng-container *ngIf="menu.isLocalLink">
+                <a
+                  class="c-top-nav__item-link c-top-nav__item-link--contact-us"
+                  [ngClass]="{ 'c-btn c-btn--primary': menu.isLocalLink }"
+                  [href]="menu.link"
+                >{{ menu.name }}</a>
+              </ng-container>
+              </li>
+          </ng-container>
+        </ul>
+      </nav>
+    </div>
+  </section>
+</section>

@@ -1,0 +1,117 @@
+/* ==========================================================================
+   #POPOVERS
+   ========================================================================== */
+
+
+/**
+ * This is an example component. Extend inuitcss by building your own components
+ * that make up your UI. Dialog component is prefixed with a `c-menu`.
+ *
+ *  Examples:
+
+      <sdcc-popover [options]="popoverOptions1">
+        <p class="u-text-small">This is a help for patient header to show you some hint.</p>
+      </sdcc-popover>
+
+ */
+
+ 
+sdcc-popover-container {
+  position: relative;
+  display: block;
+}
+
+.c-popover {
+
+  // Body
+  &__container {
+    position: absolute;
+    top: -100%;
+    z-index: 11001;
+
+    color: #757575;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #fff;
+    border-radius: .3rem;
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 5px 8px 0 rgba(0, 0, 0, .14), 0 1px 14px 0 rgba(0, 0, 0, .12);
+    list-style: none;
+
+    width: 240px;
+    padding: 12px;
+
+    transition: transform 0s ease, opacity .15s ease;
+    will-change: transform;
+  }
+
+
+  // Header
+  &__header {
+    border-bottom: solid 1px #eee;
+    background-color: #fafafa;
+    color: #424242;
+    margin: -12px;
+    margin-bottom: 12px;
+    padding: 12px;
+
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  // Header caption
+  &__caption {
+    font-size: 1.6rem;
+  }
+
+
+  // Header close
+  &__close {
+    display: flex;
+    align-items: center;
+    color: #757575;
+    i {
+      font-size: 2rem;
+    }
+  }
+
+
+  // Backdrop
+  &__backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10001;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #eee;
+    opacity: 0;
+  }
+}
+
+// Modifier
+.c-popover--right > .c-popover__container{
+    right: 0;
+}
+.c-popover--left > .c-popover__container{
+    left: 0;
+}
+
+.c-popover__container{
+  top: -38px;
+}
+.c-toolbar__row .c-popover__container {
+  top: -64px;
+}
+
+// TODO: move it to code base
+.c-btn--icon-right i,
+.c-btn i ~ i {
+    margin-right: -4px;
+    margin-left: 8px;
+}

@@ -1,0 +1,153 @@
+/* ==========================================================================
+   #MENUS
+   ========================================================================== */
+
+
+/**
+ * This is an example component. Extend inuitcss by building your own components
+ * that make up your UI. Dialog component is prefixed with a `c-menu`.
+ *
+ *  Examples:
+
+		<sdcc-menu [options]="menuOptions">
+			<button role="button" class="c-menu__item" role="menuitem">Preview</button>
+			<button role="button" class="c-menu__item" role="menuitem">Create referral</button>
+			<div class="c-menu__divider" role="separator"></div>
+			<button role="button" class="c-menu__item" role="menuitem">Close and sign</button>
+		</sdcc-menu>
+
+ */
+
+ sdcc-menu-items {
+  position: relative;
+  display: block;
+}
+
+.c-menu {
+  &__divider {
+      margin: 8px 0;
+      height: 0;
+      border: none;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: rgba(0,0,0,.12);
+  }
+
+  // Item
+  &__item {
+    border: none;
+    background: transparent;
+
+    height: 48px;
+    padding: 0 24px;
+    width: 100%;
+
+    color: #616161; // $grey_700
+    font-size: 1.6rem;
+    line-height: 48px;
+    text-align: left;
+    text-decoration: none;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    user-select: none;
+    outline: 0;
+
+    transition: background-color 50ms ease-in;
+
+    // Iccon
+    i {
+      margin-right: 20px;
+    }
+
+
+    // Hover
+    &:hover {
+      background-color: #F5F5F5; // $grey__100
+      cursor: pointer;
+    }
+    &:focus {
+      background-color: #E0E0E0; // $grey_300
+    }
+
+    a,
+    div,
+    span {
+      align-items: center;
+      display: flex;
+      justify-content: flex-start;
+      transition: color .3s ease
+    }
+
+    span i,
+    a i {
+      line-height: 24px;
+      margin-right: 4px;
+      font-size: 24px;
+    }
+  }
+
+
+  // Items
+  &__items {
+    position: absolute;
+    top: -100%;
+    z-index: 11001;
+
+    display: display;
+
+    background-color: #fff; // $white_1000
+    border-radius: .3rem;
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 5px 8px 0 rgba(0, 0, 0, .14), 0 1px 14px 0 rgba(0, 0, 0, .12);
+    list-style: none;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    min-width: 170px;
+    max-width: 460px;
+    max-height: calc(10 * 42px);
+    overflow-y: auto;
+
+    transition: transform 0s ease, opacity .15s ease;
+    will-change: transform;
+  }
+
+
+
+  // Backdrop
+  &__backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10001;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #eee; // $grey_200
+    opacity: 0;
+  }
+}
+
+// Modifier
+.c-menu--right > .c-menu__items {
+    right: 0;
+}
+.c-menu--left > .c-menu__items {
+    left: 0;
+}
+
+// Modifier related to buttons
+.c-menu__items {
+  top: -38px;
+}
+.c-toolbar__row .c-menu__items {
+  top: -64px;
+}
