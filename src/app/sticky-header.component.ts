@@ -39,6 +39,15 @@ enum Direction {
         top: 0;
         width: 100%;
         z-index: 1000;
+
+        align-items: center;
+        display: flex;
+        justify-content: center;
+      
+        background-color: #fafafa;
+        color: #fff;
+        height: 96px;
+        z-index: 1000;
       }
     `
   ],
