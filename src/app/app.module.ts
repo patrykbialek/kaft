@@ -16,6 +16,7 @@ import { MainIntroComponent } from './main/main-intro/main-intro.component';
 import { MainServicesComponent } from './main/main-services/main-services.component';
 import { MainIndustriesComponent } from './main/main-industries/main-industries.component';
 import { StickyHeaderComponent } from './sticky-header.component';
+import { MainCompaniesComponent } from './main/main-companies/main-companies.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { StickyHeaderComponent } from './sticky-header.component';
     MainServicesComponent,
     MainIndustriesComponent,
     StickyHeaderComponent,
+    MainCompaniesComponent,
   ],
   imports: [
     BrowserModule,
